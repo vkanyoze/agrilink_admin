@@ -46,7 +46,11 @@ let dataSet = [
     var table = $('#example').DataTable({
         createdRow: function ( row, data, index ) {
            $(row).addClass('selected')
-        } 
+        }, 
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'excel', 'pdf', 'csv'
+        ]
     });
       
     table.on('click', 'tbody tr', function() {
